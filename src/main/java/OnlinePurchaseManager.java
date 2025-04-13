@@ -14,7 +14,7 @@ public class OnlinePurchaseManager
     /* to be implemented in part (a) */
     int a = 0;
     for(int i = 0; i < purchases.size(); i++){
-      if(purchases.get(i).getMaker.equals(maker) && purchases.get(i).isElectronic){
+      if(purchases.get(i).getMaker().equals(maker) && purchases.get(i).isElectronic()){
         a++;
       }
     }
@@ -32,7 +32,7 @@ public class OnlinePurchaseManager
       return false;
     }
     for(int i = 0; i < purchases.size();i++){
-      if(purchases.get(i).getMaker().equals(purchases.get(i+1).getMaker()) && purchases.get(i).isElectronic == purchases.get(i + 1).isElectronic){
+      if(purchases.get(i).getMaker().equals(purchases.get(i+1).getMaker()) && purchases.get(i).isElectronic() == purchases.get(i + 1).isElectronic()){
         return true;
       }
     }
