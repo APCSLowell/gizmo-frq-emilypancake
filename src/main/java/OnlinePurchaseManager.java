@@ -31,7 +31,7 @@ public class OnlinePurchaseManager
     if(purchases.size() < 2){
       return false;
     }
-    for(int i = 0; i < purchases.size();i++){
+    for(int i = 0; i < purchases.size() - 1;i++){
       if(purchases.get(i).getMaker().equals(purchases.get(i+1).getMaker()) && purchases.get(i).isElectronic() == purchases.get(i + 1).isElectronic()){
         return true;
       }
